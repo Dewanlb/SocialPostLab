@@ -1,0 +1,20 @@
+<section id="thoughtContainer">
+  <h1 id="title">New Thoughts</h1>
+</section>
+<section id="newContainer">New Thought</section>
+<section id="postContainer">
+  <ul>
+    <li *ngFor="let post of samplePosts; index as i">
+      <p id="pTitle">{{ post.title }}</p>
+      <button
+        (click)="onDelete()"
+        id="trash"
+        class="fa fa-trash"
+        aria-hidden="true"
+      ></button>
+
+      <figcaption>{{ post.thought }}</figcaption>
+    </li>
+  </ul>
+</section>
+<!-- <post-form *ngIf="show" (submitted)="onSubmit($event)"></post-form> -->
